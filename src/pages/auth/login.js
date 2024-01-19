@@ -1,5 +1,15 @@
+import { useState } from "react";
 
 const Login = () => {
+
+    const [formRequest, setFormRequest] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleLogin = async () => {
+
+    }
 
     return (
         <main className="flex min-h-screen w-full">
