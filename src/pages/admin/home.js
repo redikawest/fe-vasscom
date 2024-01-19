@@ -2,7 +2,7 @@ import AdminLayout from "@/layout/adminLayout";
 
 const Home = () => {
   return (
-    <AdminLayout>
+    // <AdminLayout>
         <div className="max-w-full h-full mt-5 p-5">
             <div className="flex flex-row w-full">
                 <div className="flex w-1/4 mr-3">
@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    </AdminLayout>
+    // </AdminLayout>
   );
 };
 

@@ -25,11 +25,12 @@ const Product = () => {
   }, []);
 
   return (
-    <AdminLayout>
+    // <AdminLayout>
       <div className="w-full h-full mt-5 p-5">
         <div className="flex flex-row justify-between">
           <p>Manajemen Product</p>
-          <button className="btn btn-square w-36 bg-[#41A0E4] text-white">
+          <button className="btn btn-square w-36 bg-[#41A0E4] text-white"
+          onClick={()=>document.getElementById('create_product').showModal()}>
               Tambah Product
           </button>
         </div>
@@ -62,8 +63,37 @@ const Product = () => {
             </table>
           </div>
         </div>
+
+        <dialog id="create_product" className="modal">
+          <div className="modal-box">
+              <form method="dialog">
+                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+              </form>
+              <h3 className="font-bold text-lg">Create Product</h3>
+              <label className="form-control w-full mt-5">
+                  <div className="label">
+                      <span className="label-text text-xs font-normal text-[#757575]">
+                          Nama
+                      </span>
+                  </div>
+                  <input type="text" placeholder="Masukan Password" className="input input-bordered input-md w-full" />
+              </label>
+              <label className="form-control w-full mt-5">
+                  <div className="label">
+                      <span className="label-text text-xs font-normal text-[#757575]">
+                          Price
+                      </span>
+                  </div>
+                  <input type="text" placeholder="Contoh: admin@gmail.com" className="input input-bordered input-md w-full" />
+              </label>
+
+              <button className="btn btn-info mt-7 w-full text-sm font-semibold text-white">
+                  Create
+              </button>
+          </div>
+      </dialog>
       </div>
-    </AdminLayout>
+    // </AdminLayout>
   )};
   
 export default Product;
